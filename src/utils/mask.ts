@@ -42,7 +42,7 @@ function masker(value: string, pattern: string, options: any) {
     case 'words':
       sentence.replace(/(?:^|\s)\S/g, (text) => text.toUpperCase())
       break
-    case 'sentences':{
+    case 'sentences': {
       const lower = sentence.toLowerCase()
       lower.charAt(0).toUpperCase() + lower.substring(1)
       break
@@ -95,7 +95,7 @@ function currencyMasker(value = '0', options: any) {
 function dateMasker(value = '', options: any) {
   const { dateFormat = 'yyyy/mm/dd' } = options
 
-  const regex = /[a-zA-Z]/gi
+  const regex = /[a-zA-Zа-яА-Я]/gi
   const pattern = dateFormat.replaceAll(regex, '9')
   return masker(value, pattern, {})
 }

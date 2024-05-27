@@ -8,8 +8,8 @@ test('should mask with number digit pattern', () => {
 })
 
 test('should mask with alpha pattern', () => {
-  const expected = 'react-native'
-  const received = mask('react native', 'AAAAA-AAAAAA')
+  const expected = 'реакт-native'
+  const received = mask('реакт native', 'AAAAA-AAAAAA')
 
   expect(received).toBe(expected)
 })
