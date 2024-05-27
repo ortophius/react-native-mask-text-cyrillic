@@ -43,9 +43,9 @@ function toPattern(
       break
     } else if (
       (output[index] === DIGIT && values[charCounter].match(/[0-9]/)) ||
-      (output[index] === ALPHA && values[charCounter].match(/[a-zA-Z]/)) ||
+      (output[index] === ALPHA && values[charCounter].match(/[a-zA-Zа-яА-Я]/)) ||
       (output[index] === ALPHANUM &&
-        values[charCounter].match(/[0-9a-zA-Z]/)) ||
+        values[charCounter].match(/[0-9a-zA-Zа-яА-Я]/)) ||
       (output[index] === HOURS && values[charCounter].match(/[0-23]/)) ||
       (output[index] === MINUTES && values[charCounter].match(/[0-59]/)) ||
       (output[index] === SECONDS && values[charCounter].match(/[0-59]/))
